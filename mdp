@@ -1,0 +1,9 @@
+#!/bin/sh
+
+DIRNAME=`dirname "$0"`
+echo $DIRNAME
+CPATH=$DIRNAME/lib/*
+CPATH=$CPATH:$DIRNAME/build
+
+
+java -classpath "$CPATH" -Dmarkdownplus.home="$DIRNAME" nineci.markdownplus.MarkdownFile "$@"

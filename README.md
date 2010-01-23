@@ -30,7 +30,6 @@ Markdown Plus requires java 1.5 or later.
 
 Add to your PATH  the directory where you unzipped or checked-out Markdown Plus. This would be the directory where the mdp2html script or bat is located. 
 
-
 Syntax
 ------
 
