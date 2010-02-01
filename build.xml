@@ -30,13 +30,6 @@
             	 <exclude name="**/*.groovy"/>
             </fileset>
         </copy>
-        <copy includeemptydirs="false" todir="build">
-            <fileset dir="src/java">
-                <exclude name="**/*.launch"/>
-                <exclude name="**/*.java"/>
-            	<exclude name="**/*.groovy"/>
-            </fileset>
-        </copy>
     </target>
 	
    <target name="initTest" depends="init">
