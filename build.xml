@@ -62,7 +62,7 @@
     </target>
 	
     <target name="build" depends="init">
-    	<groovyc srcdir="src/java;src/groovy" destdir="build">
+    	<groovyc srcdir="src/groovy" destdir="build">
     	  <classpath>
     	    <path refid="markdown-plus.classpath"/>
     	  </classpath>
