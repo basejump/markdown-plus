@@ -30,7 +30,7 @@ Markdown Plus requires java 1.5 or later.
 
 Add the directory where you unzipped or checked-out Markdown Plus to your PATH. This would be the root directory where the bash mdp script or bat is located. 
 
-the type
+then type
 
 	mdp yourfile.md
 	
