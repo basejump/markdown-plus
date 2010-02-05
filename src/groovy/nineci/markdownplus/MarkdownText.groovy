@@ -46,7 +46,7 @@ class MarkdownText {
 	}
 	
 	public MarkdownText parseImages(MarkdownText text) {
-		replaceAll(/!\[(.*)\]\((.*) "(.*)"\)/, '<img src=\"$2\" alt=\"$1\" title=\"$3\" />') 
+		replaceAll(/!\[(.*?)\]\((.*?) "(.*?)"\)/, '<img src=\"$2\" alt=\"$1\" title=\"$3\" />') 
 		replaceAll(/!\[(.*)\]\((.*)\)/, '<img src=\"$2\" alt=\"$1\" />') 
 		return this
 	}

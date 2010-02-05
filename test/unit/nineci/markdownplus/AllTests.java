@@ -9,6 +9,7 @@ import org.junit.runners.Suite;
 @RunWith(Suite.class) 
 @Suite.SuiteClasses({
 	AnchorParserTest.class,
+	ImageTests.class,
 	DefListTests.class,
 	HeadingParserTest.class,
 	HrParserTest.class,

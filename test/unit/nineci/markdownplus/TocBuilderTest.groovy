@@ -56,20 +56,18 @@ def html='''<?xml version="1.0" encoding="UTF-8" ?>
 </html>
 '''
 def tocResult='''
-<div id="toc" class="toc">
-<ul>
+<ul class="toc">
 <li><a href="#toc1"><span class='toc-number'>1. </span><span class='toc-text'>toc 1 blah</span></a></li>
 <li><a href="#"><span class='toc-number'>2. </span><span class='toc-text'>toc 2</span></a>
-<ul>
+<ul class="toc">
 <li><a href="#toc2-1"><span class='toc-number'>2.1 </span><span class='toc-text'>toc 2-1</span></a></li>
 <li><a href="#toc2-2"><span class='toc-number'>2.2 </span><span class='toc-text'>toc 2-2</span></a>
-<ul>
+<ul class="toc">
 <li><a href="#toc2-2-1"><span class='toc-number'>2.2.1 </span><span class='toc-text'>toc 2-2-1</span></a></li>
 </ul></li>
 </ul></li>
 <li><a href="#toc3"><span class='toc-number'>3. </span><span class='toc-text'>toc 3</span></a></li>
 </ul>
-</div>
 '''.trim()
 
 def tocResultH2='''
