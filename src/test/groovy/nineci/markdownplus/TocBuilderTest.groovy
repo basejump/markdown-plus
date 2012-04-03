@@ -5,7 +5,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 class TocBuilderTest {
-	
+
 	@Test
 	void testBuild(){
 		def tocBuilder = new TocBuilder(parentTag:'body')
@@ -13,7 +13,7 @@ class TocBuilderTest {
 		println toc
 		assertEquals tocResult,toc
 	}
-	
+
 	//test with h2 as the top level
 	@Test
 	void testBuild_H2TopLevel(){
@@ -23,7 +23,7 @@ class TocBuilderTest {
 		println toc
 		assertEquals tocResultH2,toc
 	}
-	
+
 	//test with h2 as the top level
 	@Test
 	void testBuild_H2TopLevel_Depth4(){
@@ -34,7 +34,7 @@ class TocBuilderTest {
 	}
 
 def html='''<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
 <head>
 	<!--comment-->
@@ -71,15 +71,13 @@ def tocResult='''
 '''.trim()
 
 def tocResultH2='''
-<div id="toc" class="toc">
-<ul>
+<ul class="toc">
 <li><a href="#toc2-1"><span class='toc-number'>1. </span><span class='toc-text'>toc 2-1</span></a></li>
 <li><a href="#toc2-2"><span class='toc-number'>2. </span><span class='toc-text'>toc 2-2</span></a>
-<ul>
+<ul class="toc">
 <li><a href="#toc2-2-1"><span class='toc-number'>2.1 </span><span class='toc-text'>toc 2-2-1</span></a></li>
 </ul></li>
 </ul>
-</div>
 '''.trim()
 
 def tocHtml_H2_depth4='''
@@ -91,19 +89,17 @@ def tocHtml_H2_depth4='''
 <h4 id="toc2-2-1">this will get used if topLeve is 2 since the parent h1 is ignored</h4>
 '''
 def tocResult_H2_depth4='''
-<div id="toc" class="toc">
-<ul>
+<ul class="toc">
 <li><a href="#toc2-1"><span class='toc-number'>1. </span><span class='toc-text'>toc 2-1</span></a></li>
 <li><a href="#toc2-2"><span class='toc-number'>2. </span><span class='toc-text'>toc 2-2</span></a>
-<ul>
+<ul class="toc">
 <li><a href="#toc2-2-1"><span class='toc-number'>2.1 </span><span class='toc-text'>toc 2-2-1</span></a>
-<ul>
+<ul class="toc">
 <li><a href="#toc2-2-1"><span class='toc-number'>2.1.1 </span><span class='toc-text'>h4 2-2-1-1</span></a></li>
 <li><a href="#toc2-2-1"><span class='toc-number'>2.1.2 </span><span class='toc-text'>this will get used if topLeve is 2 since the parent h1 is ignored</span></a></li>
 </ul></li>
 </ul></li>
 </ul>
-</div>
 '''.trim()
 }
 
