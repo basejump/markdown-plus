@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
 class FreeMarkerProcessorTest {
 
 	@Test
-  @Ignore("Failing: Perhaps incomplete?")
+  @Ignore("Failing: Perhaps incomplete? ")
 	void testProcessContent() {
 		def fmp = new FreeMarkerProcessor()
 		def res = fmp.processContent([something:'exists'],simpleFtl)
